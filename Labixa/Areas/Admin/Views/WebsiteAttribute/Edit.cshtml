@@ -1,0 +1,117 @@
+﻿@using Outsourcing.Core
+@model Labixa.Areas.Admin.ViewModel.WebsiteAtribute.WebsiteAttributeFormModel
+@{
+    ViewBag.Title = "";
+}
+
+@section scripts{
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/ckeditor/config.js"></script>
+}
+@section breadcrumb
+{
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon"></i>
+                <a href="/">Home</a>
+            </li>
+            <li><a href="/Admin/WebsiteAttribute/">Quản lý Thuộc tính</a></li>
+
+            <li class="active">Chỉnh sửa Thuộc tính</li>
+        </ul>
+    </div>
+}
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert alert-block alert-info">
+                Chỉnh sửa Thuộc tính
+            </div>
+            @if (Model != null)
+            {
+                using (Html.BeginForm("Edit", "WebsiteAttribute", null, FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(model => model.Id)
+
+                    <div class="tabbable">
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane fade active in">
+                                <div class="form-group">
+                                    @Html.MyLabelFor(model => model.Name)
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.Name)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.MyLabelFor(model => model.Description)
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.Description)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.MyLabelFor(model => model.ControlType)
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.ControlType)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.MyLabelFor(model => model.Type)
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.Type)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.MyLabelFor(model => model.IsPublic)
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.IsPublic)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.MyLabelFor(model => model.Value)
+                                    <div class="col-sm-9">
+                                        @* Flexible control type *@
+                                        @{
+                    var template = Model.ControlType;
+
+                    if (template == "TextArea")
+                    {
+                        template = "Ckeditor";
+                    }
+                    else if (template == "Image")
+                    {
+                        template = "GetImageFromElfinder";
+                    }
+                    else if (template == "Text")
+                    {
+                        template = "String";
+                    }
+                                        }
+
+                                        @Html.EditorFor(model => model.Value, template)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                @*
+                    partial for group button
+                *@
+                @Html.Partial("_PartialButtonGroup", "/Admin/WebsiteAttribute")
+
+                }
+            }
+            else
+            {
+                <h1>Không tìm thấy thuộc tính!</h1>
+            }
+        </div>
+    </div>
+</div>

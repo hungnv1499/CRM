@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Admin_Reset" xml:space="preserve">
+    <value>Làm Lại</value>
+  </data>
+  <data name="SupportOnline" xml:space="preserve">
+    <value>Hỗ trợ trực tuyến</value>
+  </data>
+  <data name="NewsTVLabixa" xml:space="preserve">
+    <value>BÁO CHÍ - TRUYỀN HÌNH &amp; LABIXA</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Thẻ Meta Mô Tả</value>
+  </data>
+  <data name="Admin_Save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="Admin_Edit" xml:space="preserve">
+    <value>Chỉnh Sửa</value>
+  </data>
+  <data name="Admin_Back" xml:space="preserve">
+    <value>Quay Về</value>
+  </data>
+  <data name="TopService" xml:space="preserve">
+    <value>Top Dịch Vụ Labixa</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>ĐỐI TÁC LỮ HÀNH &amp; KHÁCH SẠN</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Dịch Vụ</value>
+  </data>
+  <data name="Regulationsdiscussed" xml:space="preserve">
+    <value>Quy định thảo luận</value>
+  </data>
+  <data name="Cooporation" xml:space="preserve">
+    <value>Hợp Tác</value>
+  </data>
+  <data name="BookingTourOnline" xml:space="preserve">
+    <value>Đặt Tour Trực Tuyến</value>
+  </data>
+  <data name="CustomerService" xml:space="preserve">
+    <value>Chăm Sóc Khách Hàng</value>
+  </data>
+  <data name="Recruitment" xml:space="preserve">
+    <value>Tuyển Dụng</value>
+  </data>
+  <data name="Introduce" xml:space="preserve">
+    <value>Giới Thiệu</value>
+  </data>
+  <data name="MetaTitle" xml:space="preserve">
+    <value>Thẻ Meta Trang</value>
+  </data>
+  <data name="BusinessLicenseRegistration" xml:space="preserve">
+    <value>GPDKKD: </value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Liên Hệ</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Nội Dung</value>
+  </data>
+  <data name="HeadQuarterAddress" xml:space="preserve">
+    <value>38b Trần Phú Vĩnh Nguyên Nha Trang</value>
+  </data>
+  <data name="DailyTour" xml:space="preserve">
+    <value>Tour Tổ Chức Hàng Ngày</value>
+  </data>
+  <data name="BlogCategoryId" xml:space="preserve">
+    <value>Danh Mục</value>
+  </data>
+  <data name="otherNews" xml:space="preserve">
+    <value>XEM THÊM TIN TỨC</value>
+  </data>
+  <data name="ShoppingGuide" xml:space="preserve">
+    <value>Hướng dẫn mua hàng</value>
+  </data>
+  <data name="Admin_ChooseImage" xml:space="preserve">
+    <value>Chọn Ảnh</value>
+  </data>
+  <data name="ConsultingTourEvent" xml:space="preserve">
+    <value>Tư Vấn Tour &amp; Sự Kiện</value>
+  </data>
+  <data name="Promotion" xml:space="preserve">
+    <value>Khuyến Mãi</value>
+  </data>
+  <data name="BenefitsOfCooperation" xml:space="preserve">
+    <value>Quyền lợi hợp tác</value>
+  </data>
+  <data name="EditSeo" xml:space="preserve">
+    <value>Chỉnh Sửa Seo</value>
+  </data>
+  <data name="TitleLabixaBoat" xml:space="preserve">
+    <value>Bè Du Lịch Labixa - Ngôi Nhà Giữa Biển</value>
+  </data>
+  <data name="BlogImage" xml:space="preserve">
+    <value>Hình Ảnh</value>
+  </data>
+  <data name="QA" xml:space="preserve">
+    <value>Hỏi Đáp</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>VIDEO</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tiêu Đề</value>
+  </data>
+  <data name="IntroduceModel" xml:space="preserve">
+    <value>Giới thiệu mô hình </value>
+  </data>
+  <data name="OtherTour" xml:space="preserve">
+    <value>Xem Các Tour Hấp Dẫn Khác</value>
+  </data>
+  <data name="MetaKeyWords" xml:space="preserve">
+    <value>Thẻ Meta Từ Khóa</value>
+  </data>
+  <data name="OfficeTransactions" xml:space="preserve">
+    <value>VPGD: </value>
+  </data>
+  <data name="BusinessLicenseRegistrationContent" xml:space="preserve">
+    <value>4201191802 Do Sở KHĐT Tỉnh KH cấp ngày 14/06/2010</value>
+  </data>
+  <data name="PriceVinpearlLand" xml:space="preserve">
+    <value>Bảng giá thẻ Vinpearl Land a</value>
+  </data>
+  <data name="LabixaBoat" xml:space="preserve">
+    <value>Bè Labixa</value>
+  </data>
+  <data name="OtherService" xml:space="preserve">
+    <value>CÁC DỊCH VỤ KHÁC TẠI LABIXA</value>
+  </data>
+  <data name="WhatIsLabixa" xml:space="preserve">
+    <value>Labixa là gì?</value>
+  </data>
+  <data name="IsAvailable" xml:space="preserve">
+    <value>Hiển Thị</value>
+  </data>
+  <data name="RegulationChangesPaidRefund" xml:space="preserve">
+    <value>Quy định Đổi trả -  Hoàn Tiền</value>
+  </data>
+  <data name="Admin_Create" xml:space="preserve">
+    <value>Tạo Mới</value>
+  </data>
+  <data name="HeadQuarter" xml:space="preserve">
+    <value>Trụ sở: </value>
+  </data>
+  <data name="FanLabixa" xml:space="preserve">
+    <value>FAN LABIXA</value>
+  </data>
+  <data name="AccountTransactions" xml:space="preserve">
+    <value>Tài khoản giao dịch</value>
+  </data>
+  <data name="Admin_SaveContinue" xml:space="preserve">
+    <value>Lưu Và Tiếp Tục Chỉnh Sửa</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Mô Tả</value>
+  </data>
+  <data name="OfficeTransactionsAddress" xml:space="preserve">
+    <value>09 Lê Quý Đôn, Phước Tiến, Nha Trang</value>
+  </data>
+  <data name="PaymentGuide" xml:space="preserve">
+    <value>Hướng dẫn thanh toán</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Tin Tức</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang Chủ</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Trợ Giúp</value>
+  </data>
+  <data name="Tour" xml:space="preserve">
+    <value>Tour</value>
+  </data>
+  <data name="Slug" xml:space="preserve">
+    <value>Tên Rút Gọn</value>
+  </data>
+  <data name="1demoo" xml:space="preserve">
+    <value>1demoo</value>
+  </data>
+</root>

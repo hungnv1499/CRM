@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "Thời trang nữ cao cấp , các mẫu thiết kế đẹp |LYCASA.VN";
+    ViewBag.Description = "Chúng tôi tin tưởng trong việc cung cấp dịch vụ khách hàng tuyệt vời và chúng " +
+        "tôi được đáp ứng các khách hàng của chúng tôi. Nếu bạn có bất kỳ câu hỏi, ý kiến hoặc đề nghị, vui lòng liên hệ cho chúng tôi " +
+        "Chúng tôi rất mong nhận được phản hồi từ bạn. ";
+    ViewBag.Keywords = "LYCASA.VN, lycasa, thời trang nữ, váy đẹp, đầm đẹp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    HttpCookie cookie = Request.Cookies["_culture"];
+}
+
+
+
+
+
+<div class="breadcrumb-area details-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-wrap">
+                    <nav aria-label="breadcrumb">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"></li>
+                            <li class="breadcrumb-item"></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .imgContent {
+        width: 100%;
+        height: auto;
+    }
+
+    img#imgContent21 {
+        width: 70%;
+    }
+</style>
+ @if (cookie != null && cookie.Value.Equals("vi"))
+ {
+<div class="container">
+
+    <div class="row" style="padding-top:50px;">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <img class="imgContent" id="imgContent1" alt="How To Begin" width="477" height="44" src="~/Content/Lacasa/assets/img/icon/lycasa-copy1.svg"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        @*1 content tương ứng vs 1 row*@
+    </div>
+    <div class="row" style="padding-top:50px;">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <img class="imgContent" id="imgContent21" alt="How To Begin" width="477" height="44" src="~/Content/Lacasa/assets/img/logo/u4048-4.png?crc=11736617"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-2">
+        </div>
+
+        @*1 content tương ứng vs 1 row*@
+    </div>
+    <div class="rounded-corners colelem" id="u5568" style="width:100%"><!-- simple frame --></div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <img class="imgContent" id="imgContent2"
+                 alt="“Tại LYCASA, chúng tôi cung cấp dịch vụ sản xuất ngành hàng may mặc thiết kế riêng biệt tạo ra các sản phẩm chất lượng cao để quý khách có thể tập trung tạo ra các hoạt động giá trị cho doanh nghiệp. Dưới đây là thông tin hình ảnh giải thích thêm về hoạt động tại công ty.”" width="961" height="106" src="~/Content/Lacasa/assets/img/logo/u4045-4.png?crc=4049440680"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-2">
+        </div>
+        @*1 content tương ứng vs 1 row*@
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <img class="imgContent" id="imgContent3" alt="How To Begin" src="~/Content/Lacasa/assets/img/about/sodoengg.jpg"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-2">
+        </div>
+        @*1 content tương ứng vs 1 row*@
+    </div>
+
+</div>
+ }
+else{ 
+<div class="container">
+
+    <div class="row" style="padding-top:50px;">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <img class="imgContent" id="imgContent1" alt="How To Begin" width="477" height="44" src="http://lycasa.com/images/lycasa-copy.svg?crc=485648493"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        @*1 content tương ứng vs 1 row*@
+    </div>
+    <div class="row" style="padding-top:50px;">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <img class="imgContent" id="imgContent21" alt="How To Begin" width="477" height="44" src="~/Content/Lacasa/assets/img/logo/u5571-4.png?crc=4206653136"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-2">
+        </div>
+
+        @*1 content tương ứng vs 1 row*@
+    </div>
+    <div class="rounded-corners colelem" id="u5568" style="width:100%"><!-- simple frame --></div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <img class="imgContent" id="imgContent2" alt="“At LYCASA, we offer a one-stop apparel manufacturing and sourcing service from private label design services, sourcing, tech packs creation, sampling, bulk apparel manufacturing and delivery to allow you to focus on the value creation activities of your business. Below is an info-graphic to explain further on how it works. Hover over the image for more details on each step of the process.”" width="961" height="106" src="~/Content/Lacasa/assets/img/logo//u5569-4.png?crc=254767504"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-2">
+        </div>
+        @*1 content tương ứng vs 1 row*@
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <img class="imgContent" id="imgContent3" alt="How To Begin" src="~/Content/Lacasa/assets/img/about/sodo.jpg"><!-- rasterized frame -->
+        </div>
+        <div class="col-md-2">
+        </div>
+        @*1 content tương ứng vs 1 row*@
+    </div>
+
+</div>
+}
+
+
+
+
+

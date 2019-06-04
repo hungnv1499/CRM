@@ -1,0 +1,38 @@
+﻿.banner_ad{
+    height:150px;
+    background:lightblue;
+}
+.clearpadding{
+    padding:0px;
+}
+#toolbar{
+    height: 40px;
+    background: none repeat scroll 0% 0% #23BFF2;
+}
+#toolbar a{
+    line-height: 40px;
+    font-size: large;
+    font-family: tahoma,BebasNeueRegular,arial,Georgia,serif;
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    padding: 10px 75px;
+    text-decoration:none;
+    cursor:pointer
+}
+#hotline{
+    background: none repeat scroll 0% 0% #FFF;
+    text-align: center;
+    z-index: 999;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 315px;
+}
+#inner{
+    height:124px;
+    display:none;
+}
+.navigationmenulight .sf-menu li ul a{
+    line-height:0px;
+}

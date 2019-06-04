@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outsourcing.Core", "Outsourcing.Core\Outsourcing.Core.csproj", "{CD5D0955-E501-4709-9D91-002FD8F52A2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outsourcing.Data", "Outsourcing.Data\Outsourcing.Data.csproj", "{6BDB3E77-B09C-4514-ADD2-19B03B1AC35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outsourcing.Service", "Outsourcing.Service\Outsourcing.Service.csproj", "{9C27520D-D8B8-486A-A353-EBD5A81E4DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labixa", "Labixa\Labixa.csproj", "{9EA210CC-E963-4E76-A8E7-52CE06F3BBE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{F1C27911-CE4D-429E-9483-14E73AC120C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD5D0955-E501-4709-9D91-002FD8F52A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5D0955-E501-4709-9D91-002FD8F52A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5D0955-E501-4709-9D91-002FD8F52A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5D0955-E501-4709-9D91-002FD8F52A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BDB3E77-B09C-4514-ADD2-19B03B1AC35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDB3E77-B09C-4514-ADD2-19B03B1AC35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDB3E77-B09C-4514-ADD2-19B03B1AC35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDB3E77-B09C-4514-ADD2-19B03B1AC35B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C27520D-D8B8-486A-A353-EBD5A81E4DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C27520D-D8B8-486A-A353-EBD5A81E4DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C27520D-D8B8-486A-A353-EBD5A81E4DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C27520D-D8B8-486A-A353-EBD5A81E4DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA210CC-E963-4E76-A8E7-52CE06F3BBE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA210CC-E963-4E76-A8E7-52CE06F3BBE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA210CC-E963-4E76-A8E7-52CE06F3BBE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA210CC-E963-4E76-A8E7-52CE06F3BBE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C27911-CE4D-429E-9483-14E73AC120C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1C27911-CE4D-429E-9483-14E73AC120C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1C27911-CE4D-429E-9483-14E73AC120C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1C27911-CE4D-429E-9483-14E73AC120C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B278345B-5285-4920-92ED-E68FEA143E06}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://truonglong.visualstudio.com/DefaultCollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Labixa\\Labixa.csproj
+		SccProjectName1 = Labixa
+		SccLocalPath1 = Labixa
+		SccProjectUniqueName2 = Outsourcing.Core\\Outsourcing.Core.csproj
+		SccProjectName2 = Outsourcing.Core
+		SccLocalPath2 = Outsourcing.Core
+		SccProjectUniqueName3 = Outsourcing.Data\\Outsourcing.Data.csproj
+		SccProjectName3 = Outsourcing.Data
+		SccLocalPath3 = Outsourcing.Data
+		SccProjectUniqueName4 = Outsourcing.Service\\Outsourcing.Service.csproj
+		SccProjectName4 = Outsourcing.Service
+		SccLocalPath4 = Outsourcing.Service
+		SccProjectUniqueName5 = Resources\\Resources.csproj
+		SccProjectName5 = Resources
+		SccLocalPath5 = Resources
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,116 @@
+﻿@model IEnumerable<Outsourcing.Data.Models.WebsiteAttribute>
+@using Outsourcing.Data.Models
+
+@{
+    ViewBag.Title = "Index";
+
+}
+@section scripts{
+    <script src="/Content/admin/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="/Content/admin/js/jquery.dataTables.bootstrap.js" type="text/javascript"></script>
+}
+@section breadcrumb
+{
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon"></i>
+                <a href="#">Home</a>
+            </li>
+            <li class="active">Quản lý Website</li>
+        </ul>
+    </div>
+}
+
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12">
+         
+            <a class="btn btn-success" href="/Admin/WebsiteAttribute/Create" style="margin-bottom:10px">Thêm Thuộc tính</a>
+
+            <div class="table-header">Danh sách Thuộc tính Website</div>
+
+            <table id="dataTable" class="table table-bordered table-striped table-fixed-header">
+                <thead>
+                    <tr role="row">
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Mô Tả</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody role="alert" aria-live="polite" aria-relevant="all">
+                    @if (Model != null && Model.Any())
+                    {
+                        int count = 0;
+                        foreach (var item in Model)
+                        {
+                            count++;
+                            <tr class="odd">
+                                <td class=" sorting_1">@count</td>
+                                <td class="hidden-480 ">@item.Name</td>
+                                <td class="hidden-480 ">@item.Description</td>
+                                <td class=" ">
+                                    <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+
+                                        <a href="/Admin/WebsiteAttribute/Edit?id=@item.Id" class="btn btn-xs btn-info">
+                                            <i class="icon-edit bigger-120"></i>
+                                        </a>
+                                        <a href="/Admin/WebsiteAttribute/Delete?id=@item.Id" class="btn btn-xs btn-danger">
+                                            <i class="icon-trash bigger-160"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+        var table = $("#dataTable").DataTable();
+
+        createDropFilter(table, [2]);
+        bindDropFilter(table, [5]);
+
+    });
+
+    function createDropFilter(table, array) {
+        array.forEach(function (i) {
+            var selector = ".filter_" + i;
+            var filter1 = $(selector);
+            filter1.on('change', function () {
+                table.column(i)
+                    .search($(this).val())
+                    .draw();
+            });
+
+            table.column(i).data().unique().sort().each(function (d, j) {
+                filter1.append('<option value="' + d + '">' + d + '</option>');
+            });
+
+        });
+    }
+    function bindDropFilter(table, array) {
+        array.forEach(function (i) {
+            var selector = ".filter_" + i;
+            var filter1 = $(selector);
+            filter1.on('change', function () {
+                table.column(i)
+                    .search($(this).val())
+                    .draw();
+            });
+        });
+    }
+</script>

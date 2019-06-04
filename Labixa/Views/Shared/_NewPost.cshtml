@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Outsourcing.Data.Models.Blog>
+
+@foreach (var item in Model)
+{
+    <li>
+        <a href="/tin-tuc-su-kien/@item.Slug" >@item.Title</a>
+    </li>
+}

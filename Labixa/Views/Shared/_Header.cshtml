@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Outsourcing.Data.Models.ProductCategory>
+<!--start header-->
+<header id="navigationmenu" class="fade-down animate1 navigationmenulight">
+
+    <!--start left menu close-->
+    <!--  <div class="leftmenuclose">
+         <img alt="" src="/Content/Pioneer/img/header/leftmenuclose.png">
+     </div> -->
+    <!--end left menu close-->
+    <!--start container-->
+    <div class="container">
+
+        <!--start navigation-->
+        <div class="grid_12 gridnavigation">
+
+            <a href="/Home/Index"><p style="float: left; line-height: 59px; font-weight: bold; color: Red; font-size: 2em;">PIONEER TRAVEL</p></a>
+            <!--start navigation-->
+
+            <ul class="sf-menu" id="nav">
+
+                <!--  <li class="">
+
+                     <span style="line-height: 59px;font-size:0.8em"><strong>Hotline:</strong> 0922007855   &nbsp;&nbsp;&nbsp;<strong> Email:</strong> truonglongkt12@gmail.com&nbsp;&nbsp;</span>
+
+                 </li> -->
+                <li class="red"
+                    <span class="menufilter"></span>
+                    <a href="/Home/Index"><strong>@Resources.Home</strong></a>
+                </li>
+                <li class="red">
+                    <span class="menufilter"></span>
+                    <a href="/Home/about_us"><strong>@Resources.AboutUs</strong></a>
+
+                </li>
+                <li class="orange">
+                    <span class="menufilter"></span>
+                    <a href="/Tour/Index"><strong>@Resources.Destination</strong></a>
+                    <ul>
+                        @{ var id = Model.FirstOrDefault().Id;}
+                        @foreach (var item in Model.Where(p=>p.Position == id))
+                        {
+                            <li>
+                                <a href="/Tour/categoryTour?id=@item.Id">@item.Name</a>
+                                <ul style="display: none;">
+                                    @foreach (var item2 in Model.Where(p=>p.Position==item.Id))
+                                    {
+                                        <li><a href="/Tour/categoryTour?id=@item2.Id">@item2.Name</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </li>
+                <li class="red">
+                    <span class="menufilter"></span>
+                    <a href="about-us-3.html"><strong>@Resources.HotelsDirectory</strong></a>
+                    <ul>
+                        @{ var idhotel = Model.LastOrDefault().Id;}
+                        @foreach (var item in Model.Where(p => p.Position == idhotel))
+                        {
+                            <li>
+                                <a href="/Service/@item.Id">@item.Name</a>
+                                <ul style="display: none;">
+                                    @foreach (var item2 in Model.Where(p => p.Position == item.Id))
+                                    {
+                                        <li><a href="/Service/@item2.Id">@item2.Name</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </li>
+
+                <li class="red">
+                    <span class="menufilter"></span>
+                    <a href="contact-light.html"><strong>Blog</strong></a>
+                   
+                </li>
+
+            </ul>
+            <!--end navigationmenu-->
+            <!--end navigation-->
+        </div>
+        <!--end container-->
+        <div style="float: left;position: absolute;top: 25%;right: 4%;">
+            <a href="/Home/SetCulture?culture=vi"><img src="/Content/Pioneer/img/flag/co-01.png" style="float: left;width: 33%;margin-left: 10%;margin-right: 14%;" /></a>
+            <a href="/Home/SetCulture?culture=en"><img src="/Content/Pioneer/img/flag/co-02.png" style="float: left;width: 33%;" /></a>
+</div>
+    </div>
+
+</header>
+<!--end header-->

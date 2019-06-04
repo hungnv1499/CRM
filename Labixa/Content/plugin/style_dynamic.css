@@ -1,0 +1,43 @@
+﻿body {
+			 color: #777; 		
+}
+
+.title.has_background{
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+
+.title.has_fixed_background{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center 0px;
+}
+
+header.move_menu{
+	background-image: none;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.7);	
+}
+
+p{
+	color: #777;
+}
+
+.pagination ul li a{
+	color: #777;}
+
+.blog_text_holder .text .text_inner span .blog_author, .blog_text_holder .text .text_inner span .category, .blog_text_holder .text .text_inner span a,
+.blog_holder1 article .blog_title_holder span .blog_author, .blog_holder1 article .blog_title_holder span .category, .blog_holder1 article .blog_title_holder span a, 
+.blog_single_holder article .blog_title_holder span .blog_author, .blog_single_holder article .blog_title_holder span .category, .blog_single_holder article .blog_title_holder span a, 
+.portfolio_single .portfolio_title_holder span.category, .portfolio_single .portfolio_title_holder span a{
+					}
+
+blockquote p{
+	color: #777;	}
+
+
+
+
+ 
+
+

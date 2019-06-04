@@ -1,0 +1,113 @@
+/*BASIC STYLING FOR CONTENTS*/
+.showbiz{	
+	position:relative;
+}
+.sb-clear{
+	clear:both
+}
+
+
+/*THE BASIC CONTAINER SETTINGS- NO NEED TO MODIFICATE ANYTHIN HERE*/
+.showbiz ul, .showbiz li{
+	list-style: none;
+	margin:0; 
+	padding:0;
+}
+
+.showbiz ul li{	
+	position:relative;
+	-webkit-transform: translateZ(10);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	margin-right:0px;
+}
+.showbiz .overflowholder{	
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	z-index:2
+}
+
+.showbiz .overflowholder ul{
+	width:100000px; 
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+}
+
+.showbiz .overflowholder ul li{		
+	float: left !important;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	position:relative;
+}
+
+
+
+/*THE MODERN FULLWIDTH SKIN EXTRAS*/
+.showbiz ul li.sb-modern-skin									{	margin-right:0px; border-right:1px solid #55738F;}
+
+
+
+.sb-modern-skin .darkhover										{	position:absolute; top:0px; left:0px; width:100%;height:100%;
+																	background:rgba(0,0,0,0);
+																	-webkit-transition: all 0.2s ease-out;
+																	-moz-transition: all 0.2s ease-out;
+																	-o-transition: all 0.2s ease-out;
+																	-ms-transition: all 0.2s ease-out;
+																}
+
+.sb-modern-skin .detailholder									{  position: absolute;
+																	bottom: 0px;
+																	background:#434A54;
+																	padding: 20px;
+																	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+																	overflow: hidden;
+																	width:100%;
+																	-webkit-transition: all 0.2s ease-out;
+																	-moz-transition: all 0.2s ease-out;
+																	-o-transition: all 0.2s ease-out;
+																	-ms-transition: all 0.2s ease-out;
+																}
+
+.sb-modern-skin .showbiz-title									{	font-size:17px; color:#B1BAC3;}
+
+.sb-modern-skin .excerpt										{	font-size:15px; margin:10px 0px;
+																	overflow: hidden; position: relative;
+																	display:none;
+}
+
+.sb-post-details, .sb-post-details span,
+.sb-post-details a, .sb-post-details a:visited					{	font-size:12px; line-height:22px; color:#999; font-weight:400;}
+
+.sb-readmore, .sb-readmore span,
+.sb-readmore a, .sb-readmore a:visited							{	font-size:12px; line-height:22px; color:#fff; font-weight:500; text-decoration: none;}
+.sb-modern-skin .sb-readmore									{   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+																	  filter: alpha(opacity=0);
+																	  -moz-opacity: 0.0;
+																	  -khtml-opacity: 0.0;
+																	  opacity: 0.0;
+																	  -webkit-transition: all 0.2s ease-out;
+																	  -moz-transition: all 0.2s ease-out;
+																	  -o-transition: all 0.2s ease-out;
+																	  -ms-transition: all 0.2s ease-out;
+																}
+
+
+.showbiz ul li.sb-modern-skin:hover .detailholder				{	background:#434A54;}
+.showbiz ul li.sb-modern-skin:hover .darkhover					{	background:rgba(0,0,0,0.2);}
+
+
+.showbiz ul li.sb-modern-skin:hover .sb-readmore				{   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+																	  filter: alpha(opacity=100);
+																	  -moz-opacity: 1;
+																	  -khtml-opacity: 1;
+																	  opacity: 1;
+																	}
+																	
+.sb-modern-skin .mediaholder_innerwrap img{
+	width:100%;	
+}

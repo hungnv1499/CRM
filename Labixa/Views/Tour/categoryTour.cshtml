@@ -1,0 +1,171 @@
+﻿<link href="~/Content/custom.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Tours";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<Outsourcing.Data.Models.Product>
+@using Outsourcing.Core.Common;
+<!--end right search-->
+<section class="header-page fade-up header-page-about-us" style="background-size: 100% auto;">
+    <img src="~/Content/Pioneer/img/rev-slider/3/slide3.jpg" style="width: 100%;height:300px" />
+</section>
+</section>
+<div class="divider"><span></span></div>
+<!--start page-->
+<section id="internalpage">
+    <!--start container-->
+    <div class="container clearfix">
+        @{int i = 1;
+        HttpCookie cookie = Request.Cookies["_culture"];
+        }
+        @foreach (var item in Model)
+        {
+            if (cookie.Value.Equals("vi"))
+            {
+                <div class="grid_6">
+                    <!--start archivetour-->
+                    <div class="archivetour yellow fade-left animate1">
+
+                        <!--left-->
+                        <div class="leftarchivetour">
+
+                            <a href="/Tour/detailtour?id=@item.Id"><img alt="" class="imgleftarchivetour opacity" src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url"></a>
+
+                            <div class="pricetitleleftarchivetour">
+
+                                <div class="priceleftarchivetour">
+                                    <p style="font-size: 1.5em;">@item.OldPrice.ToString("##,###,##0")</p>
+                                </div>
+                                @*<p class="titleleftarchivetour"></p>*@
+                            </div>
+
+
+                        </div>
+                        <!--end left-->
+                        <!--right-->
+                        <div class="rightarchivetour">
+
+                            <div class="titledayarchivetour">
+                                <a href="/Tour/detailTour?id=@item.Id"><p class="titlearchivetour" style="font-size: 1em; width: 100%;; font-weight: bold; color: blue; ">@item.Name.ToUpper()</p></a>
+                            </div>
+
+                            <div class="descriptioniconsarchivetour">
+
+                                <p class="descriptionarchivetour">@item.Description</p>
+                                @*<p class="iconsarchivetour">
+
+                                    <a title="Car" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/car.png"></a>
+                                    <a title="Fly and Drive" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/plane.png"></a>
+                                    <a title="Sun" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/sun.png"></a>
+                                    <a title="Insurance included" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/insurance.png"></a>
+                                    <a title="Nature" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/nature.png"></a>
+
+                                </p>*@
+
+                            </div>
+
+                        </div>
+                        <!--end right-->
+
+                    </div>
+                    <!--end archivetour-->
+                </div>
+            }
+            else
+            {
+                <div class="grid_6">
+                    <!--start archivetour-->
+                    <div class="archivetour yellow fade-left animate1">
+
+                        <!--left-->
+                        <div class="leftarchivetour">
+
+                            <a href="/Tour/detailtour?id=@item.Id"><img alt="" class="imgleftarchivetour opacity" src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url"></a>
+
+                            <div class="pricetitleleftarchivetour">
+
+                                <div class="priceleftarchivetour">
+                                    <p style="font-size: 1.5em;">@item.OldPrice.ToString("##,###,##0")</p>
+                                </div>
+                                @*<p class="titleleftarchivetour"></p>*@
+                            </div>
+
+
+                        </div>
+                        <!--end left-->
+                        <!--right-->
+                        <div class="rightarchivetour">
+
+                            <div class="titledayarchivetour">
+                                <a href="/Tour/detailTour?id=@item.Id"><p class="titlearchivetour" style="font-size: 1em; width: 100%; font-weight: bold; color: blue">@item.NameEng.ToUpper()</p></a>
+
+
+
+                            </div>
+
+                            <div class="descriptioniconsarchivetour">
+
+                                <p class="descriptionarchivetour">@item.DescEng</p>
+                                @*<p class="iconsarchivetour">
+
+                                    <a title="Car" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/car.png"></a>
+                                    <a title="Fly and Drive" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/plane.png"></a>
+                                    <a title="Sun" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/sun.png"></a>
+                                    <a title="Insurance included" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/insurance.png"></a>
+                                    <a title="Nature" class="tooltip" href="#"><img alt="" src="/Content/Pioneer/img/tours/icon/nature.png"></a>
+
+                                </p>*@
+
+                            </div>
+
+                        </div>
+                        <!--end right-->
+
+                    </div>
+                    <!--end archivetour-->
+                </div>
+            }
+            if (i % 4 == 0)
+            {
+                <div class="grid_12 banner_ad fade-left animate1">
+                    <img src="~/Content/Pioneer/img/bannerngangcar.png" style="width: 100%;
+height: 100%;" />
+
+                </div>
+
+            }
+            i++;
+        }
+
+
+
+
+    </div>
+    <!--end container-->
+
+</section>
+<!--end internal page-->
+<div class="divider"><span></span></div>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+
+
+    //start parallax
+    jQuery(document).ready(function () {
+
+        $('.header-page').parallax("100%", 0.1);
+
+    });
+    //end parallax
+
+
+    //start tooltip
+    $(document).ready(function () {
+        $(".tooltip").tooltip({ position: { my: "top+0 top-75", at: "center center" } });
+    });
+    //end tooltip
+
+
+    /* ]]> */
+</script>
+

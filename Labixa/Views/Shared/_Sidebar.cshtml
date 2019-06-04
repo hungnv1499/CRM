@@ -1,0 +1,42 @@
+﻿<div class="column2 " style=" border-left: none; background-color: #f4f4f4;">
+
+
+    <div class="column_inner lbx-border lbx-sidebar">
+       
+        <aside>
+            <div id="" class="widget widget_recent_entries abc" style="margin-top:-30px">
+                @*<h5>Khuyến mãi</h5>
+                <img src="/Images/Banner/summer.png" />*@
+                @Html.Raw(@Html.Action("GetSideBarBanner", "Home"))
+
+            </div>
+            @*<div id="tag_cloud-4" class="widget widget_tag_cloud posts_holder">
+                <h5>Bài viết theo chủ đề</h5>
+                <div class="tagcloud">
+                    <a href="#" class="tag-link-6" title="1 topic" style="font-size: 8pt;">Bè Labixa</a>
+                    <a href="#" class="tag-link-9" title="1 topic" style="font-size: 8pt;"> Lặn biển</a>
+                    <a href="#" class="tag-link-10" title="1 topic" style="font-size: 8pt;">Tour biển đảo</a>
+                    <a href="#" class="tag-link-8" title="1 topic" style="font-size: 8pt;">Scuba diving</a>
+                    <a href="#" class="tag-link-7" title="1 topic" style="font-size: 8pt;">Du lịch</a>
+                </div>
+            </div>*@
+            @*<div id="search-4" class="widget widget_search posts_holder">
+                    <form role="search" method="get" id="searchform" action="http://demo.qodinteractive.com/central/">
+                        <div>
+                            <label class="screen-reader-text" for="s">Search for:</label>
+                            <input type="text" value="" name="s" id="s">
+                            <input type="submit" id="searchsubmit" value="Search">
+                        </div>
+                    </form>
+                </div>*@
+            <div id="recent-posts-4" class="widget widget_recent_entries posts_holder">
+                <h5>Bài post gần đây</h5>		
+                <ul>
+                    @Html.Action("NewPost","Home")
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+
+</div>

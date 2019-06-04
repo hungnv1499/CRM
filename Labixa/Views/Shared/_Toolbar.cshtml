@@ -1,0 +1,120 @@
+﻿@model List<IGrouping<int, Outsourcing.Data.Models.Staff>>
+
+<div id="toolbar" class="off">
+    <a class="open gradient_1" href="#">
+        <span>@Resources.SupportOnline</span>
+    </a>
+    <div id="toolbar_outer" class="">
+        <div id="toolbar_inner">
+            <div id="toolbar_inner2">
+                <div class="three_columns clearfix">
+                    <div class="column1">
+                        <div class="column_inner website_holder">
+                            <h4>@Resources.BookingTourOnline</h4>
+                            <ul class="hotline-labixa">
+                                @if (Model[0] != null && Model[0].Any())
+                                {
+                                    foreach (var item in Model[0])
+                                    {
+                                        <li>
+
+
+                                            <span>@item.Name:</span> <h5>@item.Phone </h5>
+                                            <a href="skype:@item.skype?call">
+                                                <img width="24" height="24" alt="My status" style="border: none;" src="/Images/social/SkypeLabixa.png">
+                                            </a>
+                                            <a href="ymsgr:sendIM?@item.Yahoo" rel="nofollow">
+                                                <img width="24" height="24" src="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Emotes-face-smile-icon.png">
+                                            </a>
+
+                                        </li>
+                                    }
+                                }
+                              
+                      
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="column_inner website_holder">
+                            <h4>@Resources.ConsultingTourEvent </h4>
+                            <ul class="hotline-labixa">
+                                @if (Model[1] != null && Model[1].Any())
+                                {
+                                    foreach (var item in Model[1])
+                                    {
+                                        <li>
+
+
+                                            <span>@item.Name:</span> <h5>@item.Phone </h5>
+                                            <a href="skype:@item.skype?call">
+                                                <img width="24" height="24" alt="My status" style="border: none;" src="/Images/social/SkypeLabixa.png">
+                                            </a>
+                                            <a href="ymsgr:sendIM?@item.Yahoo" rel="nofollow">
+                                                <img width="24" height="24" src="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Emotes-face-smile-icon.png">
+                                            </a>
+
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column3">
+                        <div class="column_inner website_holder">
+                            <h4>@Resources.CustomerService </h4>
+                            <ul class="hotline-labixa">
+                               @if (Model[2] != null && Model[2].Any())
+                               {
+                                   foreach (var item in Model[2])
+                                   {
+                                    <li>
+
+
+                                        <span>@item.Name:</span> <h5>@item.Phone </h5>
+                                        <a href="skype:@item.skype?call">
+                                            <img width="24" height="24" alt="My status" style="border: none;" src="/Images/social/SkypeLabixa.png">
+                                        </a>
+                                        <a href="ymsgr:sendIM?@item.Yahoo" rel="nofollow">
+                                            <img width="24" height="24" src="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Emotes-face-smile-icon.png">
+                                        </a>
+
+                                    </li>
+                                   }
+                               }
+                                @*<li>
+
+
+                                    <span>Mr Khương:</span> <h5> 0583.591.079 </h5>
+                                    <a href="skype:khdn2009?call">
+                                        <img width="24" height="24" alt="My status" style="border: none;" src="/Images/social/SkypeLabixa.png">
+                                    </a>
+                                    <a href="ymsgr:sendIM?kdn2009" rel="nofollow">
+                                        <img width="24" height="24" src="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Emotes-face-smile-icon.png">
+                                    </a>
+
+                                </li>
+                                <li>
+
+
+                                    <span>Mr Hiền:</span> <h5>  0123.929.0123 </h5>
+
+                                    <a href="skype:khdn2009?call">
+                                        <img width="24" height="24" alt="My status" style="border: none;" src="/Images/social/SkypeLabixa.png">
+                                    </a>
+                                    <a href="ymsgr:sendIM?kdn2009" rel="nofollow">
+                                        <img width="24" height="24" src="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Emotes-face-smile-icon.png">
+                                    </a>
+
+                                </li>*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

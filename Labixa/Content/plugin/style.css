@@ -1,0 +1,147 @@
+﻿/*
+Theme Name: Central
+Theme URI: http://demo.qodeinteractive.com/central/
+Description: Central Theme
+Tags: modern, elegant, full screen, full width, parallax, creative, portfolio, business, photography, animated, multi-purpose, interactive, agency, ajax
+Author: Qode Interactive
+Author URI: http://www.qodeinteractive.com/
+Version: 1.5.3
+License: GNU General Public License
+License URI: licence/GPL.txt
+
+*/
+
+/*
+CSS changes can be made in files in the /css/ folder. This is a placeholder file required by WordPress, so do not delete it.
+
+
+Changelog
+1.5.3
+- Fixed deliting of custom sidebars
+- Fixed portfolio list and blog list for new version of Chrome
+
+1.5.2
+- Added soundcloud social icon
+- Fixed WPML language switcher bug when coming to site's internal page
+- Fixed portfolio list load more on home page
+- Fixed contact page when recaptcha is enable
+- Fixed facebook social share text
+- Fixed responsivnes of header in grid
+- Fixed accordion responsiveness
+
+1.5.1
+- Updated Revolution Slider to version 3.0.95
+- Fixed click event in accordion content
+- Fixed 4 columns shortcode css
+
+1.5
+- Added multiple sidebars support
+- Added global sidebar settings for single blog to Qode Options under "Blog" section
+- Updated translation files
+- Updated Qode > Blog > Blog style field with Blog Template 3 option
+- Fixed testimonial name bug
+
+1.4.1
+- Improved parallax for touch devices
+- Added French language files
+- Added field to Qode options to center logo and menu
+- Added Blog Template 3 - List with full posts content
+- Fixed portfolio options links to open in new window
+- Fixed WPML css when flags are used
+- Fixed logo positioning when header is not fixed
+- Fixed contact form not sending last name
+- Fixed blog list image rendering in IE8
+- Fixed blockquote line color
+- Fixed video without lighbox for portfolio style 6 - Gallery
+- Fixed testimonial font change
+
+1.4
+- Added WPML support
+- Added support for adding pagination to page content
+- Added mobile header background color
+- Updated 404 page
+- Updated child theme to enqueue style.css after all other css files
+- Updated translation files
+- Fixed pagination "Next" arrow
+- Fixed some "not translate ready" labels
+- Fixed logo height calculating on Windows Safari
+- Fixed text top/bottom margin in Qode Options
+- Fixed Qode Custom Fileds layout
+
+1.3.1
+- Added new title field for portfolio images/videos - for Gallery layout (Portfolio Style 6)
+- Added category field in latest post shortcode
+- Fixed minified css resulting in image animation not working
+- Fixed Contact form "from" value
+- Fixed archive blog template bug
+- Fixed logo width - Chrome bug only
+- Fixed full width accordion arrow animation when several instances of accordion is on same page
+
+1.3
+- Added Social Share module
+- Added new portfolio single template (Portfolio Style 6) - Gallery layout
+- Added style for Contact Form 7
+- Added style for Gravity Forms
+- Added page title to single portfolio
+- Updated blockquote color definition in Qode Options, blockquote color above text color (hierarchically)
+- Fixed click event in accordion content
+- Fixed columns shortcodes when page is with sidebar
+
+1.2.1
+- Added feature to set header fixed or not fixed to top
+- Updated Revolution Slider to version 3.0.3
+
+1.2
+- Added show/hide load more button attribute to portfolio list shortcode
+- Added fixed menu resize yes / no to Qode options
+- Added transparency of fixed menu to Qode options
+- Added page title to single post
+- Added lightbox to single portfolio page
+- Updated Revolution Slider to version 3.0
+- Updated translation files
+- Fixed google map info window bug
+- Fixed positioning of portfolios on portfolio list
+- Fixed font options for Author and Categories on blog and portfolio lists (they are changing with "Text Options" in "General Font Options")
+- Fixed hide comments for blog list
+
+
+1.1
+- Improved AJAX animations between pages to work with without '#'
+- Added "Google map zoom" field to Qode options
+- Added "Google map height" field to Qode options
+- Added "Google map scroll on mouse wheel" field to Qode options
+- Added "Load more" feature to portfolio list
+- Fixed logo position on two last sizes
+- Fixed "blog style 1" rendering posts when sidebar is chosen
+- Fixed video height when it's set through shortcode
+
+
+1.0.4
+- Added Google fonts Latin Extended subset
+- Improved load performance
+- Fixed blog - hard-coded excerpt text removed
+- Fixed video responsiveness
+- Fixed portfolio filter menu height
+
+1.0.3
+- Added feature for title in grid (yes/no) in Qode Options
+- Added lightbox to portfolio list
+- Added table shortcode
+- Updated Qode Options, Title position moved from "Global Font Options" to "Header and Footer"
+- Fixed logic for resizing logo
+- Fixed closing menu on touch devices
+
+1.0.2
+- Added style for Search Widget when Search Widget is placed in Header Right Widget
+- Added functions.php to child theme
+- Fixed IE8 layout
+- Fixed line-height of header right widget
+- Fixed blog pagination css
+- Fixed logic for resizing logo
+- Fixed error related to session
+- Fixed page title positioning
+
+1.0.1
+- ThemeForest approval issues
+
+*/

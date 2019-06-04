@@ -1,0 +1,168 @@
+﻿@model Labixa.ViewModels.IndexViewModel
+
+@{
+    ViewBag.Title = "Thời trang nữ cao cấp , các mẫu thiết kế đẹp |LYCASA.VN";
+    ViewBag.Description = "Chúng tôi tin tưởng trong việc cung cấp dịch vụ khách hàng tuyệt vời và chúng " +
+        "tôi được đáp ứng các khách hàng của chúng tôi. Nếu bạn có bất kỳ câu hỏi, ý kiến hoặc đề nghị, vui lòng liên hệ cho chúng tôi " +
+        "Chúng tôi rất mong nhận được phản hồi từ bạn. ";
+    ViewBag.Keywords = "LYCASA.VN, lycasa, thời trang nữ, váy đẹp, đầm đẹp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="slider-area">
+
+    <div class="home-slider">
+        @foreach (var item in Model.imageHome1)
+        {
+            <div class="single-slider" style="background-image: url(@item.Value);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 offset-sm-6">
+                            <div class="slider-inner d-flex align-items-center">
+                                <div class="slider-text">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+        @foreach (var item in Model.imageHome2)
+        {
+            <div class="single-slider" style="background-image: url(@item.Value);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 offset-sm-6">
+                            <div class="slider-inner d-flex align-items-center">
+                                <div class="slider-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+
+<!-- features area -->
+<!-- end features section -->
+<!-- new arrival -->
+<section class="new-arrival pt-100 pb-95">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-9">
+                <div class="product-slider shadow-right owl-carousel">
+                    @foreach (var iterm in Model.productHome)
+                    {
+                        <div class="product-item">
+                            <div class="product-thumb">
+                               
+                                    <img class="primary-img" src="@iterm.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="">
+
+                              
+
+                            </div>
+
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 order-first order-md-last">
+                <div class="product-item-text">
+                    <div class="product-des shadow-right">
+                        <h1>@Html.Raw(Resources.Lacasa_Products)</h1>
+                        <!-- <a href="#"></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- hot collection -->
+<section class="hot-collection pt-95 pb-55">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="product-item-text">
+                    <div class="product-des shadow-left">
+                        <h1>@Html.Raw(Resources.Lacasa_Products)</h1>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+                <div class="product-slider shadow-right owl-carousel">
+                    @foreach (var iterm in Model.productHomeV2)
+                    {
+                        <div class="product-item">
+                            <div class="product-thumb">
+                               
+                                    <img class="primary-img" src="@iterm.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="">
+
+                            
+
+                            </div>
+
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+        </div>
+</section>
+
+<!-- product banner -->
+<!-- blog area -->
+<!-- brand logo -->
+<div class="brand-logo pt-55 pb-55" style="display:none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="brand-logo-slider owl-carousel">
+                    <div class="single-brand">
+                        <a href="#">
+                            <img src="~/Content/Lacasa/assets/img/brand/brand1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#">
+                            <img src="~/Content/Lacasa/assets/img/brand/brand2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#">
+                            <img src="~/Content/Lacasa/assets/img/brand/brand3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#">
+                            <img src="~/Content/Lacasa/assets/img/brand/brand4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#">
+                            <img src="~/Content/Lacasa/assets/img/brand/brand5.png" alt="">
+                        </a>
+                    </div>
+                    <div class="single-brand">
+                        <a href="#">
+                            <img src="~/Content/Lacasa/assets/img/brand/brand6.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3dd48ef048ff4c889f6e53bd8f53dff2" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="CRMModel.AspNetRole" Width="1.5" PointX="8.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.AspNetUserClaim" Width="1.5" PointX="13.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.AspNetUserLogin" Width="1.5" PointX="13.25" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.AspNetUser" Width="1.5" PointX="11" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.BlogCategory" Width="1.5" PointX="10.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.Blog" Width="1.5" PointX="13" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.ChanelData" Width="1.5" PointX="11.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.DataUser" Width="1.5" PointX="14" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.Level" Width="1.5" PointX="11.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.LogDiary" Width="1.5" PointX="18.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.OrderItem" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.Order" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.Picture" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.ProductAttributeMapping" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.ProductAttribute" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.ProductCategory" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.ProductPictureMapping" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.ProductRelationship" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.SourceData" Width="1.5" PointX="9.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.Staff" Width="1.5" PointX="10.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.UserDataMapping" Width="1.5" PointX="16.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.WebsiteAttribute" Width="1.5" PointX="5.75" PointY="11.875" IsExpanded="true" />
+        <AssociationConnector Association="CRMModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.PK_AspNetUser_UserDataMappings" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_BlogCategories_dbo_BlogCategories_CategoryParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_Blogs_dbo_BlogCategories_BlogCategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_ChanelDatas_dbo_SourceDatas_SourceDataID" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_DataUsers_dbo_ChanelDatas_ChannelDataID" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_DataUsers_dbo_Levels_LevelID" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_UserDataMappings_dbo_DataUsers_DataID" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_LogDiaries_dbo_UserDataMappings_UserDataID" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_OrderItems_dbo_Orders_OrderId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_OrderItems_dbo_Products_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_ProductPictureMappings_dbo_Pictures_PictureId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_ProductAttributeMappings_dbo_ProductAttributes_ProductAttributeId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_ProductAttributeMappings_dbo_Products_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_Products_dbo_ProductCategories_ProductCategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_dbo_ProductPictureMappings_dbo_Products_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

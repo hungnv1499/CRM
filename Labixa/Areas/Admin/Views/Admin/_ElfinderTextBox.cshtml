@@ -1,0 +1,54 @@
+﻿<link rel="stylesheet" type="text/css" media="screen" href="~/Content/elfinder/css/smoothness-1.8.23/jquery-ui-1.8.23.custom.css">
+<script type="text/javascript" src="~/Content/elfinder/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="~/Content/elfinder/js/jquery-ui-1.8.11.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="~/Content/elfinder/css/elfinder.min.css">
+<script type="text/javascript" src="~/Content/elfinder/js/elfinder.min.js"></script>
+<script type="text/javascript" src="~/Content/elfinder/js/i18n/elfinder.ru.js"></script>
+<div id="finder_browse"></div>
+<script>
+    $().ready(function () {
+        var myCommands = elFinder.prototype._options.commands;
+        var options = {
+            url: '@Url.Action("LoadFile", "File")',
+            commands: myCommands,
+            lang: 'en',
+            uiOptions: {
+                toolbar: [
+                    ['back', 'forward'],
+                    ['reload'],
+                    ['home', 'up'],
+                    ['mkdir', 'mkfile', 'upload'],
+                    ['open', 'download'],
+                    ['info'],
+                    ['quicklook'],
+                    ['copy', 'cut', 'paste'],
+                    ['rm'],
+                    ['duplicate', 'rename', 'edit', 'resize'],
+                    ['view', 'sort']
+                ]
+            },
+            getFileCallback: function (file) {
+                document.getElementById('LogoUrl').value = file.url;
+                window.close();
+            },
+            handlers: {
+                select: function (event, elfinderInstance) {
+
+                    if (event.data.selected.length == 1) {
+                        var item = $('#' + event.data.selected[0]);
+                        if (!item.hasClass('directory')) {
+                            selectedFile = event.data.selected[0];
+                            $('#elfinder-selectFile').show();
+                            return;
+                        }
+                    }
+                    $('#elfinder-selectFile').hide();
+                    selectedFile = null;
+                }
+            }
+        };
+        $('#elfinder').elfinder(options).elfinder('instance');
+        $('#finder_browse').elfinder(options).elfinder('instance');               // Must update the form field id
+
+    });
+</script>

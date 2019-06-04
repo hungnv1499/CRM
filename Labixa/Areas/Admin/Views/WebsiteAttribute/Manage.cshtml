@@ -1,0 +1,83 @@
+﻿@model List<Labixa.Areas.Admin.ViewModel.WebsiteAtribute.WebsiteAttributeManageModel>
+@using Outsourcing.Data.Models
+
+@{
+    ViewBag.Title = "Index";
+
+}
+@section scripts{
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/ckeditor/config.js"></script>
+}
+@section breadcrumb
+{
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon"></i>
+                <a href="#">Home</a>
+            </li>
+            <li class="active">Quản lý Website</li>
+        </ul>
+    </div>
+}
+
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert alert-block alert-info">
+                Chỉnh sửa Thuộc tính
+            </div>
+
+            @using (Html.BeginForm("EditAll", "WebsiteAttribute", null, FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.ValidationSummary(true)
+
+                <div class="tabbable">
+                    <div class="tab-content">
+                        <ul class="nav nav-tabs" id="myTab">
+                            @foreach (var listItem in Model)
+                            {
+                                var href = "#" + listItem.Type;
+                                var isActive = Model.IndexOf(listItem) == 0 ? "active" : "";
+                                <li class="@isActive">
+                                    <a data-toggle="tab" href="@href">
+                                        @*<i class="green icon icon-home bigger-120"></i>*@
+                                        @listItem.Type
+                                    </a>
+                                </li>
+                            }
+
+                        </ul>
+
+
+                        <div class="tab-content">
+                            @for (int i = 0; i < Model.Count(); i++)
+                            {
+                                var isActive = i == 0 ? "active" : "";
+
+                                <div id="@Model[i].Type" class="tab-pane fade @isActive in">
+                                    @for (int f = 0; f < Model[i].WebsiteAttributes.Count(); f++)
+                                    {
+                                        @Html.EditorFor(model => Model[i].WebsiteAttributes[f])
+                                    }
+                                </div>
+                            }
+                   
+
+                        </div>
+                    </div>
+
+                    @Html.Partial("_PartialButtonGroup", "/Admin/WebsiteAttribute")
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>

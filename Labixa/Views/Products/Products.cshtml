@@ -1,0 +1,130 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Outsourcing.Data.Models.Product>
+@{
+    ViewBag.Title = "Thời trang nữ cao cấp , các mẫu thiết kế đẹp |LYCASA.VN";
+    ViewBag.Description = "Chúng tôi tin tưởng trong việc cung cấp dịch vụ khách hàng tuyệt vời và chúng " +
+        "tôi được đáp ứng các khách hàng của chúng tôi. Nếu bạn có bất kỳ câu hỏi, ý kiến hoặc đề nghị, vui lòng liên hệ cho chúng tôi " +
+        "Chúng tôi rất mong nhận được phản hồi từ bạn. ";
+    ViewBag.Keywords = "LYCASA.VN, lycasa, thời trang nữ, váy đẹp, đầm đẹp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Lacasa/assets/css/product.css" rel="stylesheet" />
+<style>
+    .grab {
+        cursor: -webkit-grab;
+        cursor: grab;
+    }
+</style>
+<div class="breadcrumb-area details-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-wrap">
+                    <nav aria-label="breadcrumb">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"></li>
+                            <li class="breadcrumb-item active" aria-current="page"></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="shop-wrapper pt-100 pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shop-product-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="grid">
+                                    <div class="row">
+                                        @foreach (var item in Model)
+                                        {
+                                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                                <div class="product-item mb-30">
+                                                    <div class="product-thumb">
+                                                      
+                                                            <img class="primary-img grab" id="@item.Id" src="@item.ProductPictureMappings.FirstOrDefault().Picture.Url" alt="" onclick="onClickImgModal(this.src)">
+                                                      
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        }
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paginatoin-area text-center pt-60">
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="pagination-box">
+
+                                    <li class="active">
+                                        @Html.PagedListPager(Model, page => Url.Action("Products", new { page }))
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal" onclick="closeModal()">
+    <span class="close" id="close" onclick="return closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+
+<script>
+    //change mouse show close button
+    $("#myModal").mousemove(function (event) {
+        $("#close").fadeIn(700);
+        setTimeout(function () {
+            $("#close").fadeOut(500);
+        }, 2000);
+    });
+
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById("img01");
+    //var captionText = document.getElementById("caption");
+
+    function onClickImgModal(src) {
+
+        $(document).ready(function () {
+            $("#close").fadeOut(500);
+        });
+
+        modal.style.display = "block";
+        modalImg.src = src;
+        //captionText.innerHTML = this.alt;
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+ 
+    //}
+       
+
+
+</script>

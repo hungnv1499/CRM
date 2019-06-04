@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @{ 
+        HttpCookie cookie = Request.Cookies["_culture"];
+    }
+
+    @if (ViewBag.Title != null)
+    {
+        <title>@ViewBag.Title</title>
+    }
+    else
+    {
+        <title>Thời trang Đầm/Váy/Áo |Lacasa.vn</title>
+    }
+    <meta name="adx:sections" content="https://lacasa.vn/" />
+    @if (ViewBag.Description != null)
+    {
+        <meta name="description" content="@ViewBag.Description" />
+    }
+    else
+    {
+        <meta name="description" content="Xu hướng thời trang nữ, nam 2019, Hè năm nay có gì Hot , Bộ sưu tập thiết kế váy dạ hội, đầm , áo sơ mi, ..." />
+    }
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trang phục thiết kế, váy đầm dạ hội , áo sơ mi, âu phục - Lacasa" />
+    <meta property="og:image"content="http://lycasa.com/images/lycasa-copy.svg?crc=485648493"/>
+    <meta property="og:url" content="https://lacasa.vn"/>
+    <meta property="og:site_name" content="LACASA"/>
+
+
+    <title>Lycasa</title>
+
+    <link rel="icon" href="~/Content/Lacasa/assets/img/icon/Capture.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="~/Content/Lacasa/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/Content/Lacasa/assets/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Content/Lacasa/assets/css/plugins.css">
+
+    <link rel="stylesheet" href="~/Content/Lacasa/assets/css/default.css">
+
+    <link rel="stylesheet" href="~/Content/Lacasa/assets/css/style.css">
+
+    <link rel="stylesheet" href="~/Content/Lacasa/assets/css/responsive.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <header class="header-pos">
+        <div class="header-menu header-transparent sticker plr-100">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-3 logoHeader">
+                        <div class="logo">
+                            <a href="/"><img src="~/Content/Lacasa/assets/img/icon/lycasa-copy1.svg" alt="brand-logo" id="imgLogo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 d-none d-lg-block">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li><a href="/">@Html.Raw(Resources.Lacasa_Home)</a></li>
+
+                                    <li><a href="/san-pham">@Html.Raw(Resources.Lacasa_Products)</a></li>
+
+                                    <li><a href="/quy-trinh-hop-tac">@Html.Raw(Resources.Lacasa_AboutUs) </a></li>
+                                    <li><a href="/lien-he">@Html.Raw(Resources.Lacasa_Contact)</a></li>
+                                    @if (cookie != null && cookie.Value.Equals("vi"))
+                                    {
+
+                                    <li class="class-child">
+                                        <span><a href="/language/en" class="language">  <img style="width:35px; height:37px;" src="~/Content/Lacasa/assets/img/logo/flags-06-512.png" /></a></span>
+                                       
+                                    </li>
+                                    }
+                                    else
+                                    {
+                                    <li class="class-child">
+                                        <span><a href="/language/vi" class="language">  <img style="width:35px; height:40px;" src="~/Content/Lacasa/assets/img/logo/280_Ensign_Flag_Nation_vietnam-512.png" /></a></span>
+                                    </li>
+                                    }
+
+
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-block d-lg-none"><div class="mobile-menu"></div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    @RenderBody()
+    <footer class="footer-1">
+        <div class="footer-main section-bdr pt-110 pb-115">
+            <div class="container">
+                <div class="row">
+                    <!--Start single footer widget-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="single-footer-widget pd-bottom">
+                            <div class="footer-logo">
+                                <a href="/">
+                                    <img src="~/Content/Lacasa/assets/img/icon/lycasa-copy1.svg" alt="Awesome Footer Logo" id="imgFooter">
+                                </a>
+                            </div>
+                            <div class="our-info">
+                                <p>Lycasa là nhà thiết kế và gia công sản xuất thời trang cao cấp hàng đầu tại Việt Nam.
+Chúng tôi luôn cung cấp những giải pháp gia công thời trang chuyên nghiệp, tối ưu nhất cho từng doanh nghiệp, tổ chức trong và ngoài nước. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--End single footer widget-->
+                    <!--Start single footer widget-->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-footer-widget wedo pd-left pd-bottom">
+                            <div style="color: white">
+                                <h3>@Html.Raw(Resources.Lacasa_QuiclLink)</h3>
+                            </div>
+                            <br />
+                            <ul>
+                                <li><a href="/">@Html.Raw(Resources.Lacasa_Home) </a></li>
+                                <br />
+
+                                <li><a href="/san-pham">@Html.Raw(Resources.Lacasa_Products)</a></li>
+                                <br />
+                                <li><a href="/quy-trinh-hop-tac">@Html.Raw(Resources.Lacasa_AboutUs) </a></li>
+                                <br />
+                                <li><a href="/lien-he">@Html.Raw(Resources.Lacasa_Contact)</a></li>
+                                <br />
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!--Start single footer widget-->
+                    <!--Start single footer widget-->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-footer-widget wedo pd-left pd-bottom">
+                            <div style="color: white">
+                                <h3>@Html.Raw(Resources.Lacasa_Address)</h3>
+                            </div>
+                            <br />
+                            <ul>
+                                <li>@Html.Raw(Resources.Lacasa_FooterAdd)</li>
+                                <br />
+                                <li>@Html.Raw(Resources.Lacasa_Phone): 028 3620 2721 | Hotline: 090 66 44 030</li>
+                                <br />
+
+                                <li>Email: lynguyen@lycasa.vn </li>
+                                <br />
+
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                    <!--End single footer widget-->
+                    <!--Start single footer widget-->
+                    <!--End single footer widget-->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom pt-35 pb-40">
+            <div class="container">
+                <div class="copyright-text text-center">
+                     © 2017 LYCASA Website | Created by LILOTECH
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div> <!-- /End Scroll to Top -->
+    <!-- all js include here -->
+    <script src="~/Content/Lacasa/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="~/Content/Lacasa/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/Content/Lacasa/assets/js/popper.min.js"></script>
+    <script src="~/Content/Lacasa/assets/js/bootstrap.min.js"></script>
+    <script src="~/Content/Lacasa/assets/js/plugins.js"></script>
+    <script src="~/Content/Lacasa/assets/js/ajax-mail.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAq7MrCR1A2qIShmjbtLHSKjcEIEBEEwM"></script>
+    <script src="~/Content/Lacasa/assets/js/main.js"></script>
+</body>
+
+
+</html>

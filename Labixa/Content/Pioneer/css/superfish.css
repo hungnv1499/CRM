@@ -1,0 +1,192 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	/* float: right;
+	margin:0px; */
+	float: right;
+margin: 0px 5% 0px 10%;
+}
+.sf-menu ul {
+	min-width: 12em; /* allow long menu items to determine submenu width */
+	*width: 12em; /* no auto sub width for IE7, see white-space comment below */	
+
+	background-image:url(../img/header/trianglemenulight.png);
+	background-repeat:no-repeat;
+	background-position:25px 5px;
+	
+	padding-top:15px;
+	margin-top:5px;
+}
+.sf-menu ul li ul{
+	
+	background-image:url(../img/header/trianglemenulightvertical.png);
+	background-repeat:no-repeat;
+	background-position:5px 13px;
+	
+	margin-top:0px;
+	padding-top:0px;
+	margin-left:5px;
+	padding-left:15px;
+	
+}
+.sf-menu a {
+	padding: 19px 25px;
+	padding-top:20px;
+	text-decoration: none;
+	zoom: 1; /* IE7 */
+}
+.sf-menu li ul a {
+	padding: 15px 25px;
+}
+.sf-menu li {
+	/*background: #fff;*/
+	white-space: nowrap; /* no need for Supersubs plugin */
+	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	-webkit-transition: background .2s;
+	transition: background .2s;
+}
+.sf-menu ul ul li {
+	background: #fff;
+}
+
+
+
+/*light*/
+.navigationmenulight .sf-menu li:hover , .navigationmenulight .sf-menu .evidencelabelmenu{
+	background: #f9fafc;
+}
+.navigationmenulight .sf-menu a {
+	color: #5E6D81;
+}
+.navigationmenulight .sf-menu li a {
+	border-left: 1px solid #EBEEF2;
+}
+.navigationmenulight .sf-menu > li:last-child{
+	border-right: 1px solid #EBEEF2;	
+}
+.navigationmenulight .sf-menu ul li {
+	background: #fff;
+	border-top:1px solid #EBEEF2;	
+}
+.navigationmenulight .sf-menu li ul li:last-child{
+	border-bottom:1px solid #EBEEF2;	
+}
+.navigationmenulight .sf-menu li ul a {
+	color:#A9A9A9;
+	border-right: 1px solid #EBEEF2;
+    line-height:0px;
+}
+.navigationmenulight .lastmenudropitem{
+	border-bottom:1px solid #EBEEF2;	
+}
+/*light*/
+
+
+
+/*dark*/
+.navigationmenudark .sf-menu li:hover , .navigationmenudark .sf-menu .evidencelabelmenu{
+	background: #4A515B;
+}
+.navigationmenudark .sf-menu li a {
+	color: #B3BBC6;
+}
+.navigationmenudark .sf-menu a {
+	border-left: 1px solid #55738F;
+}
+.navigationmenudark .sf-menu > li:last-child{
+	border-right: 1px solid #55738F;	
+}
+.navigationmenudark .sf-menu ul li {
+	background: #434A54;
+	border-top:1px solid #55738F;	
+}
+.navigationmenudark .sf-menu li ul li:last-child{
+	border-bottom:1px solid #55738F;	
+}
+.navigationmenudark .sf-menu li ul a {
+	color:#B3BBC6;
+	border-right: 1px solid #55738F;
+}
+.navigationmenudark .lastmenudropitem{
+	border-bottom:1px solid #55738F;	
+}
+.navigationmenudark .sf-menu ul {
+	background-image:url(../img/header/trianglemenudark.png);
+}
+.navigationmenudark .sf-menu ul li ul{
+	background-image:url(../img/header/trianglemenudarkvertical.png);	
+}
+/*dark*/
+
+
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(212,212,212,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: #EBEEF2; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(212,212,212,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: #EBEEF2;
+}
